@@ -7,6 +7,12 @@
     <!-- tailwind and daisyUI cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custom tailwind -->
     <script>
@@ -15,17 +21,87 @@
             extend: {
               colors: {
                 clifford: '#da373d',
+                'primary': '#FF4240',
+                'secondary': '#131318',
               }
             }
           }
         }
       </script>
 
+<style>
+    .Manrope{
+        font-family: 'Manrope', sans-serif;
+    }
+</style>
+
 </head>
-<body>
+<body class="Manrope container p-5 lg:px-[85px] lg:py-[50px] mx-auto">
     <header>
-        <nav></nav>
-        <div class="banner"></div>
+        <!-- navbar section -->
+        <div class="navbar bg-base-100 mb-7">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a><span class="text-primary text-base font-bold">Home</span></a></li>
+                    <li class="text-[#424247]"><a>About</a></li>
+                    <li class="text-[#424247]"><a>Pages</a></li>
+                    <li class="text-[#424247]"><a>Blog</a></li>
+                    <li class="text-[#424247]"><a>Contact</a></li>
+                </ul>
+              </div>
+              <a class="text-2xl lg:text-4xl font-extrabold text-secondary">Hockey<span class="text-primary">’</span>s</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a><span class="text-primary text-base font-bold mr-6">Home</span></a></li>
+                <li class="text-[#424247] mr-6"><a>About</a></li>
+                <li class="text-[#424247] mr-6"><a>Pages</a></li>
+                <li class="text-[#424247] mr-6"><a>Blog</a></li>
+                <li class="text-[#424247]"><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <i class="fa fa-search text-[#89898B] mr-6 hidden lg:flex"></i>
+              <button class=" bg-primary text-white text-base lg:text-xl font-bold rounded-lg px-4 py-3 lg:px-6 lg:py-4">Get Ticket</button>
+            </div>
+          </div>
+        <!-- banner section -->
+        <div class="banner relative">
+            <div class="carousel lg:h-[500px]  w-full">
+                <!-- slide 1 -->
+                <div id="slide1" class="carousel-item relative w-full">
+                  <img src="Images/1.png" class="w-full rounded-2xl" />
+                  <div class="absolute flex top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 gap-6 lg: absolute lg:left-24 lg:top-96">
+                    <a href="#slide3" class="btn btn-circle border-0 text-white bg-secondary">❮</a> 
+                    <a href="#slide2" class="btn btn-circle border-0  text-white bg-secondary">❯</a>
+                  </div>
+                </div> 
+                <!-- slide 2 -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="Images/2.png" class="w-full rounded-2xl" />
+                    <div class="absolute flex top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 gap-6 lg: absolute lg:left-24 lg:top-96">
+                      <a href="#slide1" class="btn btn-circle border-0 text-white bg-secondary">❮</a> 
+                      <a href="#slide3" class="btn btn-circle border-0  text-white bg-secondary">❯</a>
+                    </div>
+                </div> 
+                <!-- slide 3 -->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="Images/3.png" class="w-full rounded-2xl" />
+                    <div class="absolute flex top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 gap-6 lg: absolute lg:left-24 lg:top-96">
+                      <a href="#slide2" class="btn btn-circle border-0 text-white bg-secondary">❮</a> 
+                      <a href="#slide1" class="btn btn-circle border-0  text-white bg-secondary">❯</a>
+                    </div>
+                </div>               
+            </div>
+            <div class="lg: absolute bg-secondary rounded-2xl w-full lg:w-[550px] text-white p-8 lg:right-8 lg:bottom-8 sm: mt-8">
+                <h3 class="text-xl lg:text-2xl font-extrabold mb-4">Meet all the heroes from the field</h3>
+                <p>Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+            </div>
+        </div>
     </header>
     <main>
         <section></section>
